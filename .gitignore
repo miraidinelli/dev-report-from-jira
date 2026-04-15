@@ -33,6 +33,14 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# API tokens / secrets
+*.token
+*.secret
+secrets.json
+secrets.yaml
+secrets.yml
+config/secrets.*
+
 # vercel
 .vercel
 

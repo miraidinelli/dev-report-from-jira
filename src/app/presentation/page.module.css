@@ -1,0 +1,625 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #334155;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0;
+}
+
+.dateRange {
+  font-size: 1.125rem;
+  color: #94a3b8;
+  background: #334155;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 2rem;
+  overflow: hidden;
+}
+
+.slideContent {
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.slideContentTable {
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slideTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+}
+
+.slideTitleCompact {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+}
+
+.slideSubtitle {
+  font-size: 1.25rem;
+  color: #94a3b8;
+  text-align: center;
+  margin: 0 0 2rem 0;
+}
+
+.slideSubtitleCompact {
+  font-size: 1rem;
+  color: #94a3b8;
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  flex: 1;
+  align-content: center;
+}
+
+.statCard {
+  background: linear-gradient(145deg, #1e293b, #334155);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid #475569;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.totalCard {
+  background: linear-gradient(145deg, #1e3a5f, #2563eb);
+  border-color: #3b82f6;
+}
+
+.statValue {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #3b82f6;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.devValue {
+  color: #16a34a;
+}
+
+.openBugsValue {
+  color: #f59e0b;
+}
+
+.totalCard .statValue {
+  color: #ffffff;
+}
+
+.statLabel {
+  font-size: 1.25rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.totalCard .statLabel {
+  color: #e0e7ff;
+}
+
+.chartWrapper {
+  flex: 1;
+  min-height: 400px;
+  background: linear-gradient(145deg, #1e293b, #334155);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid #475569;
+}
+
+.tableWrapper {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: linear-gradient(145deg, #1e293b, #334155);
+  border-radius: 16px;
+  padding: 2rem 3rem;
+  border: 1px solid #475569;
+  overflow: visible;
+}
+
+.dataTable {
+  width: 100%;
+  max-width: 1200px;
+  border-collapse: collapse;
+  font-size: 1.5rem;
+}
+
+.dataTable thead {
+  background: #0f172a;
+}
+
+.dataTable th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-weight: 700;
+  color: #f1f5f9;
+  border-bottom: 3px solid #3b82f6;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dataTable th.center {
+  text-align: center;
+}
+
+.dataTable td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #334155;
+  color: #e5e7eb;
+}
+
+.dataTable td.center {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.35rem;
+}
+
+.dataTable tbody tr {
+  transition: background-color 0.2s;
+}
+
+.dataTable tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.dataTable tbody tr:hover {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.footer {
+  padding: 0.75rem 2rem;
+  border-top: 1px solid #334155;
+  background: #0f172a;
+}
+
+.slideIndicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.slideLabel {
+  font-size: 1rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.slideCount {
+  font-size: 1rem;
+  color: #64748b;
+}
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: #334155;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 2px;
+  transition: width 0.1s linear;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.controlButton {
+  padding: 0.5rem 1.5rem;
+  background: #334155;
+  color: #e5e7eb;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.controlButton:hover {
+  background: #475569;
+  border-color: #64748b;
+}
+
+.pausedButton {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.pausedButton:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.shortcuts {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.noData {
+  text-align: center;
+  padding: 4rem;
+}
+
+.noData h1 {
+  font-size: 2rem;
+  color: #f1f5f9;
+  margin-bottom: 1rem;
+}
+
+.noData p {
+  font-size: 1.25rem;
+  color: #94a3b8;
+}
+
+@media (max-width: 1024px) {
+  .slideTitle {
+    font-size: 2rem;
+  }
+
+  .statValue {
+    font-size: 3rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .dataTable {
+    font-size: 1.25rem;
+  }
+
+  .dataTable th {
+    padding: 1rem;
+    font-size: 1.125rem;
+  }
+
+  .dataTable td {
+    padding: 1rem;
+  }
+
+  .dataTable td.center {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .slideTitle {
+    font-size: 1.5rem;
+  }
+
+  .slideSubtitle {
+    font-size: 1rem;
+  }
+
+  .statValue {
+    font-size: 2.5rem;
+  }
+
+  .statLabel {
+    font-size: 1rem;
+  }
+
+  .dataTable {
+    font-size: 1rem;
+  }
+
+  .dataTable th {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .dataTable td {
+    padding: 0.75rem;
+  }
+
+  .dataTable td.center {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .dataTable {
+    font-size: 2rem;
+  }
+
+  .dataTable th {
+    padding: 1.5rem 2rem;
+    font-size: 1.75rem;
+  }
+
+  .dataTable td {
+    padding: 1.5rem 2rem;
+  }
+
+  .dataTable td.center {
+    font-size: 1.75rem;
+  }
+}
+
+/* Sprint Slide Styles */
+.sprintKpiGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 1rem 0 2rem;
+}
+
+.sprintKpiCard {
+  background: linear-gradient(145deg, #1e293b, #334155);
+  border: 1px solid #475569;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.sprintKpiHighlight {
+  background: linear-gradient(145deg, #1e1b4b, #2e1065);
+  border-color: #7c3aed;
+}
+
+.sprintKpiCurrent {
+  background: linear-gradient(145deg, #1e3a5f, #1e3a8a);
+  border-color: #3b82f6;
+}
+
+.sprintKpiValue {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.sprintKpiLabel {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.sprintProgressBar {
+  background: linear-gradient(145deg, #1e293b, #334155);
+  border: 1px solid #475569;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+}
+
+.sprintProgressHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #e5e7eb;
+  font-weight: 600;
+}
+
+.sprintProgressPct {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #3b82f6;
+}
+
+.sprintProgressTrack {
+  width: 100%;
+  height: 28px;
+  background: #0f172a;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.sprintProgressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  border-radius: 14px;
+  transition: width 0.6s ease;
+}
+
+/* Comparison Card Styles */
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  padding: 2rem;
+  flex: 1;
+  align-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.comparisonCard {
+  background: linear-gradient(145deg, #1e293b, #334155);
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  text-align: center;
+  border: 2px solid #475569;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 350px;
+}
+
+.comparisonCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.openTimeCard {
+  background: linear-gradient(145deg, #451a03, #78350f);
+  border-color: #f59e0b;
+}
+
+.resolutionTimeCard {
+  background: linear-gradient(145deg, #052e16, #166534);
+  border-color: #22c55e;
+}
+
+.comparisonIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.comparisonValue {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.comparisonLabel {
+  font-size: 1.5rem;
+  color: #e5e7eb;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.comparisonDescription {
+  font-size: 1rem;
+  color: #94a3b8;
+  max-width: 280px;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.comparisonCount {
+  font-size: 1.125rem;
+  color: #cbd5e1;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+  .comparisonGrid {
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .comparisonCard {
+    padding: 2rem 1.5rem;
+    min-height: 280px;
+  }
+
+  .comparisonIcon {
+    font-size: 3rem;
+  }
+
+  .comparisonValue {
+    font-size: 3.5rem;
+  }
+
+  .comparisonLabel {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .comparisonGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .comparisonCard {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+
+  .comparisonValue {
+    font-size: 2.5rem;
+  }
+
+  .comparisonLabel {
+    font-size: 1rem;
+  }
+
+  .comparisonDescription {
+    font-size: 0.875rem;
+  }
+}
